@@ -1,0 +1,9 @@
+{
+  "name": "mimo-tts",
+  "version": "1.0.0",
+  "description": "MiMo TTS Speech Provider for OpenClaw",
+  "main": "index.js",
+  "type": "module",
+  "author": "ATRI",
+  "license": "MIT"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "mimo-tts",
+  "enabledByDefault": true,
+  "contracts": {
+    "speechProviders": ["mimo-tts"]
+  },
+  "configSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "apiKey": {
+        "type": "string",
+        "description": "MiMo TTS API Key"
+      },
+      "baseUrl": {
+        "type": "string",
+        "description": "MiMo TTS API Base URL",
+        "default": "https://api.xiaomimimo.com/v1"
+      },
+      "model": {
+        "type": "string",
+        "description": "MiMo TTS Model",
+        "default": "mimo-v2.5-tts",
+        "enum": ["mimo-v2.5-tts", "mimo-v2.5-tts-voicedesign", "mimo-v2.5-tts-voiceclone"]
+      },
+      "voice": {
+        "type": "string",
+        "description": "MiMo TTS Voice ID",
+        "default": "mimo_default"
+      },
+      "format": {
+        "type": "string",
+        "description": "Audio output format",
+        "default": "wav",
+        "enum": ["wav", "pcm16", "mp3"]
+      },
+      "style": {
+        "type": "string",
+        "description": "Speech style instruction (natural language)"
+      }
+    }
+  }
+}
