@@ -230,12 +230,8 @@ export function buildMimoSpeechProvider() {
     },
     
     isConfigured: ({ providerConfig }) => {
-      console.log('[mimo-tts] isConfigured called, providerConfig:', JSON.stringify(providerConfig));
       const config = readMimoProviderConfig(providerConfig);
-      console.log('[mimo-tts] readMimoProviderConfig result:', JSON.stringify(config));
-      const result = Boolean(config.apiKey || process.env.MIMO_TTS_API_KEY);
-      console.log('[mimo-tts] isConfigured result:', result);
-      return result;
+      return Boolean(config.apiKey || process.env.MIMO_TTS_API_KEY);
     },
     
     synthesize: async (req) => {
